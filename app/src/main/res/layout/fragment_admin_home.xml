@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Admin.AdminHomeFragment">
+
+    <LinearLayout
+        android:id="@+id/layoutlogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        android:background="@drawable/backgroundhome"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:padding="26dp">
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="ADMIN DASHBOARD"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/navy"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="16dp">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <!-- Kotak 1 -->
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="130dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_margin="8dp"
+                android:elevation="4dp"
+                android:background="@color/navy">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/person_icon"
+                    app:tint="@color/white"/>
+
+                <TextView
+                    android:id="@+id/penerimaDonasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="penerima"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Penerima Donasi"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Kotak 2 -->
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="130dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_margin="8dp"
+                android:elevation="4dp"
+                android:background="@color/denim">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/person_icon"
+                    app:tint="@color/white"/>
+
+                <TextView
+                    android:id="@+id/donatur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="donatur"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Donatur"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="130dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_margin="8dp"
+                android:elevation="4dp"
+                android:background="@color/denim">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/file_icon"
+                    app:tint="@color/white"/>
+
+                <TextView
+                    android:id="@+id/champaign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="donasi"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Champaign Donasi"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Kotak 4 -->
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="130dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_margin="8dp"
+                android:elevation="4dp"
+                android:background="@color/navy">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/transaction_icon"
+                    app:tint="@color/white"/>
+
+                <TextView
+                    android:id="@+id/transaksiDonatur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="transaksi"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaksi Donatur"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

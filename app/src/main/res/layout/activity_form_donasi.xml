@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Donatur.FormDonasiActivity">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:id="@+id/profile_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/navy"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/back_icon"
+            android:background="@android:color/transparent"
+            android:contentDescription="Kembali"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="12dp"
+            app:tint="@color/white"/>
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Judul Donasi"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:maxLines="2"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+    <!-- SCROLLABLE CONTENT -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/profile_header"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- NOMINAL DONASI -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nominal Donasi"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/black"/>
+
+            <GridLayout
+                android:id="@+id/nominalGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:useDefaultMargins="true">
+
+                <!-- 4 Button Nominal -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn10000"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Rp10.000"
+                    android:layout_columnWeight="1"
+                    android:textColor="@color/black"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/black"
+                    android:backgroundTint="@android:color/transparent"
+                    app:cornerRadius="30dp"
+                    android:layout_margin="4dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn25000"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Rp25.000"
+                    android:layout_columnWeight="1"
+                    android:textColor="@color/black"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/black"
+                    android:backgroundTint="@android:color/transparent"
+                    app:cornerRadius="30dp"
+                    android:layout_margin="4dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn50000"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Rp50.000"
+                    android:layout_columnWeight="1"
+                    android:textColor="@color/black"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/black"
+                    android:backgroundTint="@android:color/transparent"
+                    app:cornerRadius="30dp"
+                    android:layout_margin="4dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLainnya"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lainnya"
+                    android:layout_columnWeight="1"
+                    android:textColor="@color/black"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/black"
+                    android:backgroundTint="@android:color/transparent"
+                    app:cornerRadius="30dp"
+                    android:layout_margin="4dp"/>
+            </GridLayout>
+
+            <EditText
+                android:id="@+id/editNominalLainnya"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan nominal lain"
+                android:inputType="number"
+                android:visibility="gone"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_box"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Metode Pembayaran"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ATM dan Internet Bangking"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTransferBank"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Transfer Bank"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@android:color/transparent"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="1dp"
+                    app:cornerRadius="12dp"
+                    android:layout_marginVertical="4dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTransferVirtual"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Virtual Account"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@android:color/transparent"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="1dp"
+                    app:cornerRadius="12dp"
+                    android:layout_marginVertical="4dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnQRIS"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="QRIS"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@android:color/transparent"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="1dp"
+                    app:cornerRadius="12dp"
+                    android:layout_marginVertical="4dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGopay"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:text="GoPay"
+                    android:textColor="@color/black"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="1dp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-Wallet"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDANA"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DANA"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@android:color/transparent"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="1dp"
+                    app:cornerRadius="12dp"
+                    android:layout_marginVertical="4dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnOVO"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:text="OVO"
+                    android:textColor="@color/black"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="1dp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lainnya"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSaldo"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Saldo"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@android:color/transparent"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="1dp"
+                    app:cornerRadius="12dp"
+                    android:layout_marginVertical="4dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CANCEL"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="@color/design_default_color_error"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btnSubmitDonasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DONATE"
+                    android:backgroundTint="@color/logo"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

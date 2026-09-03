@@ -1,0 +1,10 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Gradasi Warna -->
+    <gradient
+        android:startColor="@color/soft"
+        android:endColor="#D8ECFD"
+        android:angle="45"/>
+
+    <corners android:radius="8dp"/>
+    <stroke android:color="@color/soft" android:width="0.5dp"/>
+</shape>

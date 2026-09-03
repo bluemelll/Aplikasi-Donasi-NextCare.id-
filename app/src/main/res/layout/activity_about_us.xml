@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/layoutlogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        android:background="@drawable/backgroundhome"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:padding="26dp">
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="ABOUT US"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/navy"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/aboutus"
+        android:textSize="16sp"
+        android:textColor="@color/navy"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="30dp"
+        android:background="@drawable/backgroundprofile"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backButton"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/white"
+        android:drawablePadding="8dp"
+        app:iconGravity="textStart"
+        app:icon="@drawable/back_icon"
+        android:text="Back to Setting"
+        app:iconTint="@null"
+        android:textColor="@color/black"
+        app:strokeWidth="0.8dp"
+        app:cornerRadius="30dp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

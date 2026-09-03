@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Admin.AdminDonationFragment"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/layoutlogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/backgroundhome"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:padding="26dp">
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+    </LinearLayout>
+
+    <SearchView
+        android:id="@+id/searchViewDonasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutlogo"
+        android:queryHint="Cari campaign"
+        android:iconifiedByDefault="false"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:queryBackground="@android:color/transparent"
+        android:elevation="2dp"/>
+
+    <ListView
+        android:id="@+id/listViewDonasi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchViewDonasi"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="8dp"
+        android:dividerHeight="5dp"
+        android:divider="@color/white" />
+
+    <FrameLayout
+        android:id="@+id/containerForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutlogo"
+        android:visibility="gone" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/AddDonasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        app:srcCompat="@drawable/add_icon"
+        android:backgroundTint="@color/navy"
+        app:tint="@color/white"
+        android:contentDescription="Tambah Donasi" />
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+package com.example.projectdonasi.Penerima;
+
+import android.os.Bundle;
+import android.view.MenuItem;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
+import com.example.projectdonasi.NavigationVisibilityListener;
+import com.example.projectdonasi.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
+
+public class PenerimaHomeActivity extends AppCompatActivity implements NavigationVisibilityListener {
+    private BottomNavigationView bottomNavigationView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_penerima_home);
+
+        bottomNavigationView = findViewById(R.id.bottom_navigation_penerima);
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                Fragment selectedFragment = null;
+
+                int itemId = item.getItemId();
+
+                if (itemId == R.id.nav_home) {
+                    selectedFragment = new PenerimaHomeFragment();
+                } else if (itemId == R.id.nav_donasi){
+                    selectedFragment = new PenerimaChampaignFragment();
+                } else if (itemId == R.id.nav_setting) {
+                    selectedFragment = new PenerimaSettingFragment();
+                }
+
+                return loadFragment(selectedFragment);
+            }
+        });
+
+        loadFragment(new PenerimaHomeFragment());
+        bottomNavigationView.setSelectedItemId(R.id.nav_home);
+    }
+
+    @Override
+    public void setNavigationBarVisibility(int visibility) {
+        if (bottomNavigationView != null) {
+            bottomNavigationView.setVisibility(visibility);
+        }
+    }
+
+    private boolean loadFragment(Fragment fragment) {
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, fragment)
+                    .commit();
+            return true;
+        }
+        return false;
+    }
+
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/soft">
+
+    <!-- Illustration -->
+    <ImageView
+        android:id="@+id/illustration"
+        android:layout_width="361dp"
+        android:layout_height="371dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/rounded_button"
+        android:src="@drawable/logo" />
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nice to see you!"
+        android:textSize="26sp"
+        android:textColor="@color/logo"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/illustration" />
+
+    <TextView
+        android:id="@+id/subtitleText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Support causes you care about — donate and make a difference with our app."
+        android:textSize="14sp"
+        android:textColor="@color/logo"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/welcomeText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/subtitleText"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:paddingHorizontal="16dp">
+
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Sign in"
+            android:backgroundTint="@color/logo"
+            android:textColor="@color/soft"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Sign up"
+            android:backgroundTint="@color/denim"
+            android:textColor="@color/soft"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
